@@ -9,7 +9,7 @@
   font-style: normal;
 }
 
-.qtum-icon {
+.eqpay-icon {
   font-family: 'qtum-icons' !important;
   speak: none;
   font-style: normal;
@@ -21,9 +21,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.qtum-icon--qtum:before {
+.eqpay-icon--eqpay:before {
   content: "\e906";
 }
-.qtum-icon--discord:before {
+.eqpay-icon--discord:before {
   content: "\e90d";
 }

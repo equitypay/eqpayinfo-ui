@@ -16,7 +16,7 @@
           <td>
             <AddressLink :address="address" />
           </td>
-          <td class="monospace break-word">{{ balance | qtum(8) }} QTUM</td>
+          <td class="monospace break-word">{{ balance | eqpay(8) }} EQRC</td>
           <td class="monospace">{{ (balance / totalSupply * 100).toFixed(4) + '%' }}</td>
         </tr>
       </tbody>

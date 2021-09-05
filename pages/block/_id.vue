@@ -34,7 +34,7 @@
         </div>
         <div class="columns">
           <div class="column info-title">{{ $t('block.block_reward') }}</div>
-          <div class="column info-value monospace">{{ reward | qtum }} QTUM</div>
+          <div class="column info-value monospace">{{ reward | eqpay }} EQRC</div>
         </div>
         <div class="columns">
           <div class="column info-title">{{ $t('block.difficulty') }}</div>

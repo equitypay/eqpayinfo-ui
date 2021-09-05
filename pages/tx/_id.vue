@@ -44,7 +44,7 @@
         </div>
         <div class="columns" v-if="fees > 0">
           <div class="column info-title">{{ $t('transaction.transaction_fee') }}</div>
-          <div class="column info-value monospace">{{ fees | qtum }} QTUM</div>
+          <div class="column info-value monospace">{{ fees | eqpay }} EQRC</div>
         </div>
 
         <Transaction

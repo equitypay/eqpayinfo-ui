@@ -1,1 +1,1 @@
-# qtuminfo-ui
+# eqpayinfo-ui

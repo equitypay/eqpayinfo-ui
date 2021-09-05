@@ -1,4 +1,4 @@
-import * as QtuminfoAPI from '@/services/qtuminfo-api'
+import * as EqPayinfoAPI from '@/services/qtuminfo-api'
 
 class Transaction {
   static get(id, options = {}) {
@@ -6,10 +6,10 @@ class Transaction {
       if (id.length === 0) {
         return []
       } else {
-        return QtuminfoAPI.get('/txs/' + id.join(','), options)
+        return EqPayinfoAPI.get('/txs/' + id.join(','), options)
       }
     } else {
-      return QtuminfoAPI.get(`/tx/${id}`, options)
+      return EqPayinfoAPI.get(`/tx/${id}`, options)
     }
   }
 
@@ -18,19 +18,19 @@ class Transaction {
       if (id.length === 0) {
         return []
       } else {
-        return QtuminfoAPI.get('/txs/' + id.join(','), {params: {brief: ''}, ...options})
+        return EqPayinfoAPI.get('/txs/' + id.join(','), {params: {brief: ''}, ...options})
       }
     } else {
-      return QtuminfoAPI.get(`/tx/${id}`, {params: {brief: ''}, ...options})
+      return EqPayinfoAPI.get(`/tx/${id}`, {params: {brief: ''}, ...options})
     }
   }
 
   static getRecentTransactions(options = {}) {
-    return QtuminfoAPI.get('/recent-txs', options)
+    return EqPayinfoAPI.get('/recent-txs', options)
   }
 
   static sendRawTransaction(data, options = {}) {
-    return QtuminfoAPI.post('/tx/send', {rawtx: data}, options)
+    return EqPayinfoAPI.post('/tx/send', {rawtx: data}, options)
   }
 }
 

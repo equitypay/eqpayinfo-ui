@@ -3,7 +3,7 @@
     <div class="field">
       <label>{{ $t('blockchain.network_weight') }}</label>
       <div class="control">
-        <output class="monospace">{{ netStakeWeight | qtum(8) }}</output>
+        <output class="monospace">{{ netStakeWeight | eqpay(8) }}</output>
       </div>
     </div>
     <div class="field">

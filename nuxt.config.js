@@ -2,7 +2,7 @@ import webpack from 'webpack'
 
 export default {
   head: {
-    titleTemplate: '%s - qtum.info',
+    titleTemplate: '%s - eqpay.info',
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no'}
@@ -29,13 +29,13 @@ export default {
         use: 'yaml-loader'
       })
       config.plugins.push(new webpack.DefinePlugin({
-        'process.env.qtuminfoAPIBase': JSON.stringify(process.env.QTUMINFO_API_BASE
-          || process.env[isServer ? 'QTUMINFO_API_BASE_SERVER' : 'QTUMINFO_API_BASE_CLIENT']
+        'process.env.eqpayinfoAPIBase': JSON.stringify(process.env.EQRCINFO_API_BASE
+          || process.env[isServer ? 'EQRCINFO_API_BASE_SERVER' : 'EQRCINFO_API_BASE_CLIENT']
           || 'http://localhost:7001/'),
-        'process.env.qtuminfoWSBase': JSON.stringify(process.env.QTUMINFO_WS_BASE
-          || process.env.QTUMINFO_API_BASE_WS
+        'process.env.eqpayinfoWSBase': JSON.stringify(process.env.EQRCINFO_WS_BASE
+          || process.env.EQRCINFO_API_BASE_WS
           || '//localhost:7001/'),
-        'process.env.network': JSON.stringify(process.env.QTUM_NETWORK || 'mainnet')
+        'process.env.network': JSON.stringify(process.env.EQRC_NETWORK || 'mainnet')
       }))
     },
     extractCSS: true,
