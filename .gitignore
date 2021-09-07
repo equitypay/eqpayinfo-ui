@@ -60,3 +60,4 @@ typings/
 .nuxt
 
 dist
+nuxt.config.json

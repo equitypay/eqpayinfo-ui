@@ -1,24 +1,21 @@
-@font-face {
+/* @font-face {
   font-family: 'qtum-icons';
-  src: url('fonts/qtum-icons.eot?vyas3r');
-  src: url('fonts/qtum-icons.eot?vyas3r#iefix') format('embedded-opentype'),
+  src:
     url('fonts/qtum-icons.ttf?vyas3r') format('truetype'),
     url('fonts/qtum-icons.woff?vyas3r') format('woff'),
     url('fonts/qtum-icons.svg?vyas3r#qtum-icons') format('svg');
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 .eqpay-icon {
-  font-family: 'qtum-icons' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.eqpay-icon-footer {
+  height: 31px;
+  width: 32px;
 }
 
 .eqpay-icon--eqpay:before {

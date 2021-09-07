@@ -17,7 +17,7 @@
         </li>
         <li>
           <a target="_blank" href="https://forum.eqpay.org">
-            <span class="eqpay-icon eqpay-icon--eqpay"></span> {{ $t('footer.forum') }}
+            <span><img class="eqpay-icon-footer" src="../icons/fonts/eqrc-icon.svg" /></span> {{ $t('footer.forum') }}
           </a>
         </li>
         <li>
@@ -27,7 +27,7 @@
         </li>
       </ul>
       <div class="copyright">
-        2017 - 2019 EQRC CHAIN FOUNDATION &copy; All rights Reserved
+        2020 - 2021 QTUM CHAIN FOUNDATION &copy; All rights Reserved
       </div>
     </div>
   </footer>
