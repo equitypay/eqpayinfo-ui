@@ -10,7 +10,7 @@
       </div>
       <div class="is-pulled-right">
         <nuxt-link v-if="confirmations" :to="{name: 'block-id', params: {id: transaction.blockHeight}}"
-          class="tag" :class="confirmations >= 10 ? 'is-success' : 'confirmation-' + confirmations">
+          class="tag" :class="confirmations >= 301 ? 'is-success' : 'confirmation-' + confirmations">
           {{ confirmations }} {{ $tc('transaction.confirmations', confirmations) }}
         </nuxt-link>
         <span v-else class="tag is-danger">{{ $t('transaction.unconfirmed') }}</span>

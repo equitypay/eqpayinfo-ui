@@ -124,13 +124,13 @@
     },
     async asyncData({store, req, error}) {
       try {
-        let [currentBlock, recentBlocks, recentTransactions, {netStakeWeight: stakeWeight, feeRate}] = await Promise.all([
+        let [currentBlock, recentBlocks, recentTransactions, {netStakeWeight: stakeWeight, feeRate, difficulty}] = await Promise.all([
           Block.get(store.state.blockchain.height),
           Block.getRecentBlocks({ip: req && req.ip}),
           Transaction.getRecentTransactions({ip: req && req.ip}),
           Misc.info({ip: req && req.ip})
         ])
-        return {difficulty: currentBlock.difficulty, recentBlocks, recentTransactions, stakeWeight, feeRate}
+        return {difficulty: difficulty, recentBlocks, recentTransactions, stakeWeight, feeRate}
       } catch (err) {
         if (err instanceof RequestError) {
           error({statusCode: err.code, message: err.message})
@@ -161,7 +161,8 @@
     watch: {
       async 'blockchain.height'(height) {
         let block = await Block.get(height)
-        this.difficulty = block.difficulty
+        let info = await Misc.info({})
+        this.difficulty = info.difficulty
         if (height === this.recentBlocks[0].height + 1) {
           this.recentBlocks.unshift({
             hash: block.hash,
